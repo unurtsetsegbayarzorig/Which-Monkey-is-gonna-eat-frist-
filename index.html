@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    .main{
+        width: 2000px;
+        height: 1111px;
+        background-image: url("nature.jpg");
+ 
+    }
+    #banana1{
+    width:180px ;
+    margin-top: 100px;
+    margin-left: 607px;
+    margin-bottom: 500px;
+ 
+    }
+    #banana2{
+    width: 180px;
+    margin-top: 100px;
+    margin-left: 186px;
+    float:left;
+    }
+
+    #monkey1{
+    width: 312px;
+    margin-top: 470px;
+    margin-left: -1063px;
+    position: absolute;
+
+
+    }
+    #monkey2{
+    width: 312px;
+    margin-top: 470px;
+    margin-left: -268px;
+    position: absolute;
+    /* margin-bottom: -212px */
+
+    }
+</style>
+</body>
+<input  onkeypress="monk(event)" type="text" style="margin: 10px ; margin-left: 500px;">
+    <div class="main">
+        <img id="banana1"  src="banana.png">
+        <img id="banana2"  src="banana 2.png">
+       
+        <img src="monkey.png" id="monkey1">
+        <img src="monkey 2.png" id="monkey2"> </div>
+
+    <script>
+        let mon1=470;
+        let mon2=470;
+       let monkey1=document.getElemetById('monkey1') ;
+       let monkey2=document.getElemetById('monkey2') ;
+
+       function monk(event){
+        let e=event.which;
+
+        if (e==115){
+            mon1-=10;
+            document.getElementById('monkey2').style.marginTop=mon1+"px";
+            // document.getElemetById('monkey1').style.marginTop=mon1+"px";
+        }
+        if(mon1<198 ){
+            alert("Monkey 2 won!")
+        }
+
+        if (e==107){
+            mon2-=20;
+            document.getElementById('monkey1').style.marginTop=mon2+"px";
+        }
+        if(mon2<198 ){
+            alert("Monkey 1 won!")
+        }
+       }
+       
+       
+        </script>
+</html>
